@@ -6,7 +6,9 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # Get a list of current dir json files:
 for root, dirs, files in os.walk("."):
+    # print(len(files), files)
     json_files = [f for f in files if f.endswith('.json')]
+    break  # break after reporting current dir files and don't go deeper
 
 # print(json_files)
 
